@@ -23,5 +23,9 @@ Route::get('/Information', function () {
     return view('informacion');
 });
 
+Route::get('/test', function () {
+    return view('test');
+});
+
 
 

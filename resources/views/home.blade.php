@@ -42,14 +42,20 @@
                             <a id="UctHeader_hlLogout" class="menu_logout" href="">Logout</a></span></li>
                         <li id="UctHeader_lstItmHelp" class="header_menu_right"><span class="menu_help">
                             <a id="UctHeader_hlHelp" class="menu_help" href="#">Help</a></span></li>
+                        
          </ul>
         </td>
     </tr>
 </tbody></table>
 
+
         <div class="content">
             <span class="content_header_text3">Welcome
-                <span id="lblCandidateName">Traer Nombre desde la Database Campo :Name Complete</span>
+                <span id="lblCandidateName">@if (Auth::check())
+                    {{Auth::user()->name_complete}}
+                @else
+                    need to login
+                @endif</span>
             </span>
             <br>
             <br>
@@ -67,7 +73,11 @@
                                         </p>
                                     </td>
                                     <td valign="bottom" align="right">
-                                        <input type="submit" name="btnExamResult" value="Statement of Results" onclick="window.open(&#39;/Members/GraphicalProfile.aspx?CandidateUCI=ZSF996961&#39;,&#39;_self&#39;,&#39;toolbar=no, resizable=yes&#39;); return false;" id="btnExamResult" title="Open PDF report in new window" class="button" style="width:154px;">
+                                        <a name="btnExamResult" id="btnExamResult" title="Open PDF report in new window" class="arturo button" style="width:130px;" href="	@if (Auth::check())
+                                        {{Auth::user()->link}}
+                                    @else
+                                        need to login
+                                    @endif">Statement of Results</a>
                                     </td>
                                 </tr>
                             </tbody></table>
@@ -182,5 +192,10 @@
 
     </div>
 
+<style>
+.arturo{
+    transform: translate(px)
+}
 
+</style>
 </body></html>

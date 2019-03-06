@@ -194,7 +194,6 @@
                 </tr>
                 <tr>
                     <td>
-                        <img src="{{ asset('login/transparent.gif') }} ">
                     </td>
                 </tr>
             </tbody></table>

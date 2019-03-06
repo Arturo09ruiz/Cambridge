@@ -49,7 +49,13 @@
 									<table cellpadding="0" cellspacing="0" border="0" width="100%">
 										<tbody><tr>
 											<td width="185"><label class="mydetails_label_name">Name:</label></td>
-											<td><span id="lblUserName" class="label5">Traer Nombre desde La Database Campo : Name Complete</span></td>
+											<td><span id="lblUserName" class="label5">
+													@if (Auth::check())
+													{{Auth::user()->name_complete}}
+												@else
+													need to login
+												@endif</span>
+									
 										</tr>
 										<tr>
 											<td></td>
@@ -58,7 +64,7 @@
 										</tr>
 										<tr>
 											<td><img alt="Email" src="{{ asset('images/Mail.gif') }}" class="mail"><label class="label">Email Address:</label></td>
-											<td><input name="txbEmailAddress" type="text" id="txbEmailAddress" class="textbox" value="Traer Email desde la base de datos : Campo :email"></td>
+											<td><input name="txbEmailAddress" type="text" id="txbEmailAddress" class="textbox" value="{{Auth::user()->email}}"></td>
 										</tr>
 									</tbody></table>
 								</fieldset>
