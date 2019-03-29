@@ -13,6 +13,7 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('name_complete');
+            $table->string('correo');
             $table->string('email' ,128)->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('link');

@@ -13,6 +13,7 @@ class LoginController extends Controller
      * @param  \Illuminate\Http\Request $request
      *
      * @return Response
+
      */
     public function authenticate(Request $request)
     {
@@ -23,4 +24,5 @@ class LoginController extends Controller
             return redirect()->intended('');
         }
     }
+
 }

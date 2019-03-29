@@ -3,6 +3,8 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Cambridge English Online Results Service - Home</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <link rel="stylesheet" type="text/css" href="{{ asset('css/ie5.css') }}">
 
 
@@ -38,11 +40,23 @@
                             <a id="UctHeader_hlMyDetails" class="menu_mydetails_current" href="/MyDetails">My details</a></span></li>
                         <li id="UctHeader_lstItmExamInfo" class="header_menu_left"><span class="menu_examinfo">
                             <a id="UctHeader_hlExamInfo" class="menu_examinfo" href="/Information">Information on our exams</a></span></li>
-                        <li id="UctHeader_lstLogOut" class="header_menu_right"><span class="menu_logout">
-                            <a id="UctHeader_hlLogout" class="menu_logout" href="">Logout</a></span></li>
+                            <li id="UctHeader_lstLogOut" class="header_menu_right"><span class="menu_logout">
+
+                                <div class="menu_logout dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a id="UctHeader_hlLogout" class="menu_logout" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+    
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </li>
                         <li id="UctHeader_lstItmHelp" class="header_menu_right"><span class="menu_help">
                             <a id="UctHeader_hlHelp" class="menu_help" href="#">Help</a></span></li>
                         
+                            
          </ul>
         </td>
     </tr>
@@ -68,12 +82,12 @@
                                     <td>
                                         <span class="content_header_text">Your result is available</span><br>
                                         <p class="content2">
-                                            If you want to see your Statement of Results, you will need to have <a href="http://www.adobe.com/products/acrobat/readstep2.html" target="_blank" class="link" title="Download Adobe">Adobe Reader</a> on your
+                                            If you want to see your Statement of Results, you will need to have <a href="#" target="_blank" class="link" title="Download Adobe">Adobe Reader</a> on your
                                             computer.
                                         </p>
                                     </td>
                                     <td valign="bottom" align="right">
-                                        <a name="btnExamResult" id="btnExamResult" title="Open PDF report in new window" class="arturo button" style="width:130px;" href="	@if (Auth::check())
+                                        <a target="_blank" name="btnExamResult" id="btnExamResult" title="Open PDF report in new window" class="arturo button" style="width:130px;" href="	@if (Auth::check())
                                         {{Auth::user()->link}}
                                     @else
                                         need to login
@@ -92,7 +106,7 @@
                         </p>
                         <p class="content2">
                             The name that is shown on the Statement of Results will be the name published on
-                            your certificate. If your name is not correct, please <a href="http://cambridgeesol-centres.org/centres/centreContactDetails.do?centreNumber=EC002&amp;qualification=ALL&amp;source=candidateexam" id="btnContactCentre" target="_blank" class="link" title="Contact Centre">contact your Examination Centre</a>
+                            your certificate. If your name is not correct, please <a href="#" id="btnContactCentre" target="_blank" class="link" title="Contact Centre">contact your Examination Centre</a>
                             immediately.
                         </p>
                         <p class="content2">
@@ -139,7 +153,7 @@
                             <br>
                             <span id="spnOverallScore">For component level scores and an explanation of the scale,
                                 see the
-                                <a onclick="window.open(&#39;/Members/GraphicalProfile.aspx?CandidateUCI=ZSF996961&#39;,&#39;_self&#39;,&#39;toolbar=no, resizable=yes&#39;); return false;" id="linkButtonSoR" title="Open PDF report in new window" href="javascript:__doPostBack(&#39;linkButtonSoR&#39;,&#39;&#39;)" style="display:inline-block;width:136px;"><b><u>Statement of Results</u></b></a>
+                                <a  style="display:inline-block;width:136px;"><b><u>Statement of Results</u></b></a>
                             </span>
                             <br>
                             <br>
@@ -156,7 +170,7 @@
                             <br>
                             <br>
                             
-                            <a id="aSendResult" href="https://resultsshare.cambridgeenglish.org/candidate/resultshare">
+                            <a id="aSendResult" href="#">
                                 <span id="spanSendResult">
 		                            <strong>Send my result</strong>
 	                            </span>
@@ -168,11 +182,11 @@
                     <td align="right">
                         <br>
                         <br>
-                        <a href="http://www.cambridgeenglish.org/learning-english/" title="opens in new window" target="_blank">
+                        <a href="#" title="opens in new window" target="_blank">
                             <img src="{{ asset('images/CER_6001_7Y07_Candidate_Support_Exam_Preparation_168x67.jpg') }}" alt="Candidate Support - Exam preparation" width="168" height="67"></a>
                         <br>
                         <br>
-                        <a href="http://www.cambridge.org/exams" title="opens in new window" target="_blank">
+                        <a href="#" title="opens in new window" target="_blank">
                             <img src="{{ asset('images/CER_6001_7Y07_Buy_Official_Exam_Preparation_banner_AB.jpg') }} " alt="Buy now - Online Preparation Materials" width="168"></a>
                     </td>
                 </tr>
@@ -184,9 +198,9 @@
 <tbody><tr>
     <td style="text-align: right;">© Copyright <a href="">Arturo Ruiz 2019 </a> </td>
     <td style="text-align: center;">|</td>
-    <td style="text-align: center;width: 100px;"><a href="https://candidates.cambridgeenglish.org/Resources/Terms%20of%20Use%20for%20Candidate%20Results%20Servic1.pdf" target="_blank" title="PDF opens in new window">Terms of Use</a></td>
+    <td style="text-align: center;width: 100px;"><a href="#" target="_blank" title="PDF opens in new window">Terms of Use</a></td>
     <td style="text-align: center;">|</td>
-    <td style="text-align: left"><a href="http://www.cambridgeenglish.org/footer/data-protection/" target="_blank" title="PDF opens in new window">Data Protection</a></td>
+    <td style="text-align: left"><a href="#" target="_blank" title="PDF opens in new window">Data Protection</a></td>
 </tr>
 </tbody></table>
 

@@ -22,18 +22,31 @@
 <table cellspacing="0" cellpadding="0" width="760" border="0">
     <tbody><tr>
         <td>
-            <ul class="header_menu">
-                
-                <li id="UctHeader_lstItmHome" class="header_menu_left"><span class="menu_home">
-                    <a id="UctHeader_hlHome" class="menu_home" href="/home">Home</a></span></li>
-                <li id="UctHeader_lstItmMyDetails" class="header_menu_left_current"><span class="menu_mydetails">
-                    <a id="UctHeader_hlMyDetails" class="menu_mydetails_current" href="/MyDetails">My details</a></span></li>
-                <li id="UctHeader_lstItmExamInfo" class="header_menu_left"><span class="menu_examinfo">
-                    <a id="UctHeader_hlExamInfo" class="menu_examinfo" href="/Information">Information on our exams</a></span></li>
-                <li id="UctHeader_lstLogOut" class="header_menu_right"><span class="menu_logout">
-                    <a id="UctHeader_hlLogout" class="menu_logout" href="">Logout</a></span></li>
-                <li id="UctHeader_lstItmHelp" class="header_menu_right"><span class="menu_help">
-                    <a id="UctHeader_hlHelp" class="menu_help" href="#">Help</a></span></li></ul>
+			<ul class="header_menu">
+				<li id="UctHeader_lstItmHome" class="header_menu_left"><span class="menu_home">
+						<a id="UctHeader_hlHome" class="menu_home" href="/home">Home</a></span></li>
+					<li id="UctHeader_lstItmMyDetails" class="header_menu_left_current"><span class="menu_mydetails">
+						<a id="UctHeader_hlMyDetails" class="menu_mydetails_current" href="/MyDetails">My details</a></span></li>
+					<li id="UctHeader_lstItmExamInfo" class="header_menu_left"><span class="menu_examinfo">
+						<a id="UctHeader_hlExamInfo" class="menu_examinfo" href="/Information">Information on our exams</a></span></li>
+						<li id="UctHeader_lstLogOut" class="header_menu_right"><span class="menu_logout">
+
+							<div class="menu_logout dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+								<a id="UctHeader_hlLogout" class="menu_logout" href="{{ route('logout') }}"
+								   onclick="event.preventDefault();
+												 document.getElementById('logout-form').submit();">
+									{{ __('Logout') }}
+								</a>
+
+								<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+									@csrf
+								</form>
+							</li>
+					<li id="UctHeader_lstItmHelp" class="header_menu_right"><span class="menu_help">
+						<a id="UctHeader_hlHelp" class="menu_help" href="#">Help</a></span></li>
+					
+						
+	 </ul>
         </td>
     </tr>
 </tbody></table>
@@ -59,12 +72,12 @@
 										</tr>
 										<tr>
 											<td></td>
-											<td><a href="http://cambridgeesol-centres.org/centres/centreContactDetails.do?centreNumber=EC002&amp;qualification=ALL&amp;source=candidateexam" id="btnContactCentre" target="_blank" class="link" title="Contact Centre">If your name is wrong, contact your centre</a><br><br>
+											<td><a href="#" id="btnContactCentre" target="_blank" class="link" title="Contact Centre">If your name is wrong, contact your centre</a><br><br>
 											</td>
 										</tr>
 										<tr>
 											<td><img alt="Email" src="{{ asset('images/Mail.gif') }}" class="mail"><label class="label">Email Address:</label></td>
-											<td><input name="txbEmailAddress" type="text" id="txbEmailAddress" class="textbox" value="{{Auth::user()->email}}"></td>
+											<td><input name="txbEmailAddress" type="text" id="txbEmailAddress" class="textbox" value="{{Auth::user()->correo}}"></td>
 										</tr>
 									</tbody></table>
 								</fieldset>
@@ -108,9 +121,9 @@
 <tbody><tr>
     <td style="text-align: right;">© Copyright <a href="">Arturo Ruiz 2019</a> </td>
     <td style="text-align: center;">|</td>
-    <td style="text-align: center;width: 100px;"><a href="https://candidates.cambridgeenglish.org/Resources/Terms%20of%20Use%20for%20Candidate%20Results%20Servic1.pdf" target="_blank" title="PDF opens in new window">Terms of Use</a></td>
+    <td style="text-align: center;width: 100px;"><a href="#" target="_blank" title="PDF opens in new window">Terms of Use</a></td>
     <td style="text-align: center;">|</td>
-    <td style="text-align: left"><a href="http://www.cambridgeenglish.org/footer/data-protection/" target="_blank" title="PDF opens in new window">Data Protection</a></td>
+    <td style="text-align: left"><a href="#" target="_blank" title="PDF opens in new window">Data Protection</a></td>
 </tr>
 </tbody></table>
 

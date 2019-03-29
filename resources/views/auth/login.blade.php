@@ -4,7 +4,7 @@
 <!-- saved from url=(0072)https://candidates.cambridgeenglish.org/Members/Login.aspx?action=logout -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/ie5.css') }} ">
-    <title>Arturo</title>
+    <title>Cambridge English Online Results Service</title>
     <script src="{{ asset('login/switchcontent.js.descarga') }}" language="javascript" type="text/javascript"></script>
     <script async="" src="{{ asset('login/site24x7rum-min.js.descarga') }}"></script>
 
@@ -33,7 +33,7 @@
                 
                 
                 <li id="UctHeader_lstItmHelp" class="header_menu_right"><span class="menu_help">
-                    <a id="UctHeader_hlHelp" class="menu_help" href="https://candidates.cambridgeenglish.org/Members/Help.aspx">Help</a></span></li></ul>
+                    <a id="UctHeader_hlHelp" class="menu_help" href="#">Help</a></span></li></ul>
         </td>
     </tr>
 </tbody></table>
@@ -74,12 +74,12 @@
                                             <b>ID Number</b></a> and 
                                             <a class="contentBlack tooltip bottom animate blue" data-tool="Your Secret Number can be found on your Confirmation of Entry.">
                                             <b>Secret Number</b></a> provided on your Confirmation of Entry
-                                            in order to register. Speak to your <a href="https://www.cambridgeenglish.org/find-a-centre/find-an-exam-centre/" target="_blank" class="content tooltip bottom animate blue" data-tool="If you are not sure which exam centre you took your exam with, your teacher may be able to help you">
+                                            in order to register. Speak to your <a href="#" target="_blank" class="content tooltip bottom animate blue" data-tool="If you are not sure which exam centre you took your exam with, your teacher may be able to help you">
                                                 exam centre</a> if you need these details.
                                         </p>
                                     </td>
                                     <td align="right" valign="middle">
-                                        <a id="hlRegister" title="Register" class="register" href="https://candidates.cambridgeenglish.org/Members/Register.aspx">Register</a>
+                                        <a id="hlRegister" title="Register" class="register" href="#">Register</a>
                                     </td>
                                 </tr>
                             </tbody></table>
@@ -170,7 +170,7 @@
                                                    
                                                                 </form>
                                                             <div style="float: left;vertical-align:top;">
-                                                                <a id="hlForgottenPassword" class="link" href="https://candidates.cambridgeenglish.org/Members/ForgottenPassword.aspx">Forgotten your password?</a>
+                                                                <a id="hlForgottenPassword" class="link" href="#">Forgotten your password?</a>
                                                             </div>
                                                             
                                                         </td>
@@ -203,9 +203,9 @@
 <tbody><tr>
     <td style="text-align: right;">© Copyright <a href="">Arturo Ruiz 2019</a></td>
     <td style="text-align: center;">|</td>
-    <td style="text-align: center;width: 100px;"><a href="https://candidates.cambridgeenglish.org/Resources/Terms%20of%20Use%20for%20Candidate%20Results%20Servic1.pdf" target="_blank" title="PDF opens in new window">Terms of Use</a></td>
+    <td style="text-align: center;width: 100px;"><a href="#" target="_blank" title="PDF opens in new window">Terms of Use</a></td>
     <td style="text-align: center;">|</td>
-    <td style="text-align: left"><a href="http://www.cambridgeenglish.org/footer/data-protection/" target="_blank" title="PDF opens in new window">Data Protection</a></td>
+    <td style="text-align: left"><a href="#" target="_blank" title="PDF opens in new window">Data Protection</a></td>
 </tr>
 </tbody></table>
 
